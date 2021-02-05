@@ -29,9 +29,9 @@ class image_clustering:
 		except FileExistsError:
 			pass
 		print("\n output folders created.")
-		os.makedirs("output")
+		os.makedirs("output", exist_ok=True)
 		for i in range(self.n_clusters):
-			os.makedirs("output\\cluster" + str(i))
+			os.makedirs("output\\cluster" + str(i), exist_ok=True)
 		print("\n Object of class \"image_clustering\" has been initialized.")
 
 	def load_images(self):
